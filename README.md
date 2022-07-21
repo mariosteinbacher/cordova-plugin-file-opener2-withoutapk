@@ -1,4 +1,8 @@
-# A File Opener Plugin for Cordova
+# A File Opener Plugin for Cordova without APK (REQUEST_INSTALL_PACKAGES)
+
+This is a Fork of [pwlin/cordova-plugin-file-opener2](https://github.com/pwlin/cordova-plugin-file-opener2) and just removes the REQUEST_INSTALL_PACKAGES permission for Android.
+
+## A File Opener Plugin for Cordova
 
 [![Latest Stable Version](https://img.shields.io/npm/v/cordova-plugin-file-opener2.svg)](https://www.npmjs.com/package/cordova-plugin-file-opener2) [![Total Downloads](https://img.shields.io/npm/dt/cordova-plugin-file-opener2.svg)](https://npm-stat.com/charts.html?package=cordova-plugin-file-opener2)
 

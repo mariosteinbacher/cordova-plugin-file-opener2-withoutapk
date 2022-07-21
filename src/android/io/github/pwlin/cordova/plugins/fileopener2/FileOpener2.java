@@ -1,7 +1,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2013 pwlin - pwlin05@gmail.com
+Copyright (c) 2022 mariosteinbacher - mario@i-gap.at
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -109,18 +109,8 @@ public class FileOpener2 extends CordovaPlugin {
 
 				Intent intent;
 				if (contentType.equals("application/vnd.android.package-archive")) {
-					// https://stackoverflow.com/questions/9637629/can-we-install-an-apk-from-a-contentprovider/9672282#9672282
-					intent = new Intent(Intent.ACTION_INSTALL_PACKAGE);
-					Uri path;
-					if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
-						path = Uri.fromFile(file);
-					} else {
-						Context context = cordova.getActivity().getApplicationContext();
-						path = FileProvider.getUriForFile(context, cordova.getActivity().getPackageName() + ".fileOpener2.provider", file);
-					}
-					intent.setDataAndType(path, contentType);
-					intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
-
+                    // REMOVED the ability to open APK (ACTION_INSTALL_PACKAGE) and so the permission (REQUEST_INSTALL_PACKAGES)
+					// probably runs into an error and crashes
 				} else {
 					intent = new Intent(Intent.ACTION_VIEW);
 					Context context = cordova.getActivity().getApplicationContext();
