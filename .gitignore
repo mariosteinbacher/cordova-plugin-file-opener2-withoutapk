@@ -5,4 +5,4 @@
 *.war
 *.ear
 *.bak
-/nbproject/private/
+/nbproject/*
