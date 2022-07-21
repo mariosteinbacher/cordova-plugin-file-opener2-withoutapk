@@ -111,6 +111,7 @@ public class FileOpener2 extends CordovaPlugin {
 				if (contentType.equals("application/vnd.android.package-archive")) {
                     // REMOVED the ability to open APK (ACTION_INSTALL_PACKAGE) and so the permission (REQUEST_INSTALL_PACKAGES)
 					// probably runs into an error and crashes
+					intent = new Intent(Intent.ACTION_VIEW);
 				} else {
 					intent = new Intent(Intent.ACTION_VIEW);
 					Context context = cordova.getActivity().getApplicationContext();
