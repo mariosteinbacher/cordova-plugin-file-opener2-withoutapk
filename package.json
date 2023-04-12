@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-file-opener2-withoutapk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A File Opener Plugin for Cordova without APK (REQUEST_INSTALL_PACKAGES)",
   "cordova": {
     "id": "cordova-plugin-file-opener2-withoutapk",
